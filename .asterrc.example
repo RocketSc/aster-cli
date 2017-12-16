@@ -1,0 +1,4 @@
+{
+  "page": "./src/pages",
+  "component": "./src/components"
+}
