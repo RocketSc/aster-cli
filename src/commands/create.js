@@ -38,7 +38,6 @@ module.exports = (entity, name, options) => {
   const file = snippet.replace(/%name%/g, name);
 
   const index = path.resolve(folder, `index.js`);
-  const exportLine = `export { default as ${name}} from './${name}';\n`
 
   fs.writeFile(fullPath, file, () => console.log(`${name}.js created!`));
 
@@ -47,11 +46,12 @@ module.exports = (entity, name, options) => {
     const snippetPath = path.resolve(process.cwd(), `./.snippets/container.js`);
     const snippet = fs.readFileSync(snippetPath, { encoding: 'utf8' });
     const file = snippet.replace(/%name%/g, name);
-    const exportLine = `export { default as ${name}} from './${name}Container';\n`
-    
     fs.writeFile(fullPath, file, () => console.log(`${name}Container.js created!`));
+
+    const exportLine = `export { default as ${name} } from './${name}Container';\n`
     fs.writeFile(index, exportLine, () => console.log('index.js created!'));
   } else {
+    const exportLine = `export { default as ${name} } from './${name}';\n`
     fs.writeFile(index, exportLine, () => console.log('index.js created!'));
   }
 }
