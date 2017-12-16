@@ -1,3 +1,3 @@
 module.exports = {
-  rcName: '.asterrc.example',
+  rcName: '.asterrc',
 }
