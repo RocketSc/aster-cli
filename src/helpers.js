@@ -28,6 +28,7 @@ module.exports = {
   },
 
   createSnippet: (source, destination, name) => {
-    
-  }
+
+  },
+  
 };
