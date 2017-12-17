@@ -12,12 +12,12 @@ module.exports = (entity, name, options) => {
 
   const fileName = name.split('/').pop();
 
-  createFile(rootPath, folderPath, fileName);
+  createFile(rootPath, folderPath, fileName, fileName, 'component');
 
   const index = path.resolve(rootPath, folderPath, `index.js`);
 
   if (options.c) {
-    createFile(rootPath, folderPath, `${fileName}Container`);
+    createFile(rootPath, folderPath, fileName, `${fileName}Container`, 'container');
     const exportLine = `export { default as ${fileName} } from './${fileName}Container';\n`
     fs.writeFile(index, exportLine, () => console.log('index.js created!'));
   } else {
