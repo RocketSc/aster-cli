@@ -1,6 +1,6 @@
 {
   "name": "aster-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Command line interface for generating react-redux app snippets",
   "bin": {
     "aster": "./index.js"
