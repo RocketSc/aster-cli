@@ -18,7 +18,7 @@ module.exports = (entity, name, options) => {
 
   if (options.c) {
     createFile(rootPath, folderPath, fileName, `${fileName}Container`, 'container');
-    const exportLine = `export { default as ${fileName} } from './${fileName}Container';\n`
+    const exportLine = `export { default as ${name} } from './${fileName}Container';\n`
     fs.writeFile(index, exportLine, () => console.log('index.js created!'));
   } else {
     const exportLine = `export { default as ${name} } from './${name}';\n`
