@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Support](#support)
+
+## Requirements
+
+node 9
 
 ## Installation
 
